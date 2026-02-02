@@ -1,0 +1,6 @@
+# Ignore the local terraform directory (binaries and plugins)
+**/.terraform/
+
+# Ignore all state files (contain secrets and architecture info)
+**/*.tfstate
+**/*.tfstate.*
