@@ -19,6 +19,9 @@ provider "aws" {
 
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "terraform-up-and-running-state-phijo"
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "aws_s3_bucket_versioning" "enabled" {
